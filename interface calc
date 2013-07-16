@@ -1,0 +1,57 @@
+import java.lang.*; 
+
+ public interface Calculator  {
+   public void add(int num1,int num2);
+   public void sub(int num3,int num4);
+   public void mul(int num5,int num6);
+}
+ public class SimpleCalculator implements Calculator  {
+  public void add(int num1,int num2)  {
+        int a;
+  a=num1+num2;
+	System.out.println(a);
+    }
+  public void sub(int num3,int num4)  {
+        int b;
+	b=num3-num4;
+	System.out.println(b);
+    }
+  public void mul(int num5,int num6)  {
+        int c;
+	c=num5*num6;
+	System.out.println(c);
+    } 
+}
+  public class AdvancedCalculator implements Calculator  {
+  
+  public void add(int num1,int num2)  {
+        int a;
+	a=2*(num1+num2);
+	System.out.println(a);
+    }
+  public void sub(int num3,int num4)  {
+        int b;
+	b=2*(num3-num4);
+	System.out.println(b);
+    }
+  public void mul(int num5,int num6)  {
+        int c;
+	c=2*(num5*num6);
+	System.out.println(c);
+    }     
+}   
+ public class IphoneCalculator implements Calculator  {
+ public static void main(String args[])  {
+ 
+  SimpleCalculator s=new SimpleCalculator();
+  AdvancedCalculator a=new AdvancedCalculator();
+  
+  s.add(5,5);
+  s.sub(7,8);
+  s.mul(2,3);
+
+  a.add(5,5);
+  a.sub(7,8);
+  a.mul(2,3);
+ }
+}
